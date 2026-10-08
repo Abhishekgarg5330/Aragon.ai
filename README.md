@@ -2,8 +2,9 @@
 
 Simple photo upload flow with client-side format checks, MongoDB metadata (`imageId` + `storageKey`), and swappable cloud storage.
 
-![Uploading image.png…]()
+## Screenshot
 
+![Upload photos UI — in progress, accepted, and rejected](docs/upload-ui.png)
 
 ## Structure
 
