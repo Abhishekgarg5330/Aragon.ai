@@ -15,6 +15,7 @@ Set `STORAGE_PROVIDER` in `backend/.env`:
 |-------|----------|
 | `local` (default) | Files under `LOCAL_STORAGE_PATH`; previews via `/api/files/...` |
 | `s3` | AWS S3; set `AWS_*` and `S3_BUCKET`; previews use signed URLs |
+| `gcs` | Google Cloud Storage; set `GCS_BUCKET` and `GOOGLE_APPLICATION_CREDENTIALS` (path to service account JSON); optional `GCS_PROJECT_ID`; previews use signed URLs |
 
 Upload and validation code only talk to `StorageProvider` — swap providers without changing business logic.
 

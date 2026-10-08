@@ -13,6 +13,11 @@ export const config = {
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
     bucket: process.env.S3_BUCKET,
   },
+  gcs: {
+    bucket: process.env.GCS_BUCKET,
+    projectId: process.env.GCS_PROJECT_ID,
+    keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
+  },
   skipFaceDetection: process.env.SKIP_FACE_DETECTION === 'true',
   validation: {
     minWidth: Number(process.env.MIN_WIDTH) || 400,

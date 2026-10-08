@@ -24,7 +24,8 @@ router.get('/:imageId/preview', async (req, res) => {
   const key = doc.processedStorageKey || doc.storageKey;
   const contentType = doc.processedMimeType || doc.mimeType;
 
-  if (process.env.STORAGE_PROVIDER === 's3') {
+  const provider = (process.env.STORAGE_PROVIDER || 'local').toLowerCase();
+  if (provider === 's3' || provider === 'gcs') {
     const url = await storage.getReadableUrl(key);
     res.redirect(url);
     return;
