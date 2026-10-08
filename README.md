@@ -2,6 +2,9 @@
 
 Simple photo upload flow with client-side format checks, MongoDB metadata (`imageId` + `storageKey`), and swappable cloud storage.
 
+![Uploading image.png…]()
+
+
 ## Structure
 
 - `frontend/` — React (Vite), upload UI, polling for processing status
